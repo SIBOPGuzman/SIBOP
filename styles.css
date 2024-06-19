@@ -1,0 +1,279 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffaa; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #4caf50; 
+    color: white;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+header .logo {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+header .logo img {
+    width: 50px; 
+    margin-right: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+nav {
+    background-color: #3b723c; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 10px;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Amarillo */
+}
+
+/* Estilo para los submenús */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #4caf50; /* Verde */
+    padding: 0;
+    top: 100%; /* Posiciona el submenú debajo del elemento padre */
+    left: 0;
+    width: max-content;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#menu li:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    border-top: 1px solid #ddd; /* Línea de separación entre elementos */
+}
+
+submen
+u li:first-child {
+    border-top: none; /* No hay línea de separación antes del primer elemento */
+}
+
+.submenu a {
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.submenu a:hover {
+    background-color: #3b723c; /* Verde más oscuro */
+}
+
+/* Estilos para las secciones */
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #4caf50;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+section ul li a {
+    text-decoration: none;
+    color: #4caf50;
+    transition: color 0.3s;
+}
+
+section ul li a:hover {
+    color: #007bff;
+}
+
+/* Botones y formularios */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-container {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #ffffff;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 90%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-group .small-input {
+    width: 30%;
+    display: inline-block;
+}
+
+.form-group .medium-input {
+    width: 60%;
+    display: inline-block;
+}
+
+.form-group .large-input {
+    width: 100%;
+    display: inline-block;
+}
+
+.form-group .inline-label {
+    display: inline-block;
+    width: 20%;
+}
+
+.form-group .inline-input {
+    display: inline-block;
+    width: 75%;
+}
+
+.signature {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.signature div {
+    width: 45%;
+    text-align: center;
+}
+
+h2{
+    color: #45a049;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+table, th, td {
+    border: 1px solid #ccc;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+select{
+    width: 80%;
+    
+}
+
+#map { height: 400px; }
+
+select.custom-select {
+    width: 80%;
+    /* Otros estilos personalizados */
+}
+
+select.custom-select option {
+    color: #000; /* Asegúrate de que el texto sea visible */
+}
+.checkbox-group {
+    display: flex;
+    gap: 10px; /* Espacio entre las casillas de verificación */
+}

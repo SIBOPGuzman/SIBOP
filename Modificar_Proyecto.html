@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            
+            <h1>SIBOP</h1>
+        </div>
+    </header>
+    <nav>
+        <ul id="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li>
+                <a href="#arquitectos">Arquitectos</a>
+                <ul class="submenu">
+                    <li><a href="Agregar_Arqui.html">Agregar Arquitecto</a></li>
+                    <li><a href="Modificar_Arqui.html">Modificar Arquitecto</a></li>
+                    <li><a href="Consultar_Arqui.html">Consultar Arquitecto</a></li>
+                    <li><a href="Eliminar_Arqui.html">Eliminar Arquitecto</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#proyectos">Proyectos</a>
+                <ul class="submenu">
+                    <li><a href="Agregar_Proyecto.html">Agregar Proyecto</a></li>
+                    <li><a href="Modificar_Proyecto.html">Modificar Proyecto</a></li>
+                    <li><a href="Consultar_Proyecto.html">Consultar Proyecto</a></li>
+                    <li><a href="Eliminar_Proyecto.html">Eliminar Proyecto</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#bitacora">Bitácora</a>
+                <ul class="submenu">
+                    <li><a href="consultar_bitacora.html">Consultar Bitácora</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Modificar Proyecto</h1>
+        <form id="projectForm">
+            <!-- Seleccionar Arquitecto o Perito -->
+            <div class="form-container">
+                <h2>Seleccionar Arquitecto o Perito</h2>
+                <div class="form-group">
+                    <label for="listaArquitectos">Arquitectos/Peritos</label>
+                    <select id="listaArquitectos" name="listaArquitectos" required>
+                        <option value="" selected>Selecciona un arquitecto/perito</option>
+                        <!-- Opciones de arquitectos/peritos -->
+                    </select>
+                </div>
+            </div>
+            <!-- Seleccionar Proyecto -->
+            <div class="form-container">
+                <h2>Seleccionar Proyecto</h2>
+                <div class="form-group">
+                    <label for="listaProyectos">Proyectos</label>
+                    <select id="listaProyectos" name="listaProyectos" class="custom-select" required>
+                        <option value="" selected>Selecciona un proyecto</option>
+                        <!-- Opciones de proyectos -->
+                    </select>
+                </div>
+            </div>
+            <!-- Datos del Proyecto -->
+            <div class="form-container">
+                <h2>Datos del Proyecto</h2>
+                <div class="form-group">
+                    <label for="codigo">Código del Proyecto:</label>
+                    <input type="text" id="codigo" name="codigo" required>
+                </div>
+                <div class="form-group">
+                    <label for="folio_licencias">Folio de Licencias:</label>
+                    <input type="text" id="folio_licencias" name="folio_licencias">
+                </div>
+                <div class="form-group">
+                    <label for="folio_alineamiento">Folio de Alineamiento:</label>
+                    <input type="text" id="folio_alineamiento" name="folio_alineamiento">
+                </div>
+                <div class="form-group">
+                    <label for="fecha_apertura">Fecha de Apertura:</label>
+                    <input type="date" id="fecha_apertura" name="fecha_apertura">
+                </div>
+                <div class="form-group">
+                    <label for="fecha_cierre">Fecha de Cierre:</label>
+                    <input type="date" id="fecha_cierre" name="fecha_cierre">
+                </div>
+                <div class="form-group">
+                    <label for="fecha_solicitud">Fecha de Solicitud:</label>
+                    <input type="date" id="fecha_solicitud" name="fecha_solicitud">
+                </div>
+                <div class="form-group">
+                    <label for="nombre_razon_social">Nombre o Razón Social:</label>
+                    <input type="text" id="nombre_razon_social" name="nombre_razon_social">
+                </div>
+                <div class="form-group">
+                    <label for="domicilio">Domicilio:</label>
+                    <input type="text" id="domicilio" name="domicilio">
+                </div>
+                <div class="form-container">
+                    <h2>Finca Afectada</h2>    
+                    <div class="form-group">
+                        <label for="calle_colonia_FA">Calle y Colonia:</label>
+                        <input type="text" id="calle_colonia_FA" name="calle_colonia_FA">
+                    </div>
+                    <div class="form-group">
+                        <label for="longitude">Longitud:</label>
+                        <input type="text" id="longitude" name="longitude">
+                    </div>
+                    <div class="form-group">
+                        <label for="latitude">Latitud:</label>
+                        <input type="text" id="latitude" name="latitude">
+                    </div>
+                    <div class="form-group">
+                        <label for="manzana_FA">Manzana:</label>
+                        <input type="text" id="manzana_FA" name="manzana_FA">
+                    </div>
+                    <div class="form-group">
+                        <label for="lote_FA">Lote:</label>
+                        <input type="text" id="lote_FA" name="lote_FA">
+                    </div>
+                    <div class="form-group">
+                        <label for="cuenta_catastral_FA">Cuenta Catastral:</label>
+                        <input type="text" id="cuenta_catastral_FA" name="cuenta_catastral_FA">
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion_obra">Descripción de la Obra:</label>
+                        <input type="text" id="descripcion_obra" name="descripcion_obra">
+                    </div>
+                </div>
+            </div>
+            <!-- Superficie de la Obra -->
+            <div class="form-container">
+                <h2>Superficie de la Obra</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Localización</th>
+                            <th>M2</th>
+                            <th>ML</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sótano</td>
+                            <td><input type="text" id="superficie_SotanoM2" name="superficie_SotanoM2" required></td>
+                            <td><input type="text" id="superficie_SotanoML" name="superficie_SotanoML" required></td>
+                        </tr>
+                        <tr>
+                            <td>Planta Baja</td>
+                            <td><input type="text" id="superficie_PlantaBajaM2" name="superficie_PlantaBajaM2" required></td>
+                            <td><input type="text" id="superficie_PlantaBajaML" name="superficie_PlantaBajaML" required></td>
+                        </tr>
+                        <tr>
+                            <td>Mezzanine</td>
+                            <td><input type="text" id="superficie_MezzanineM2" name="superficie_MezzanineM2" required></td>
+                            <td><input type="text" id="superficie_MezzanineML" name="superficie_MezzanineML" required></td>
+                        </tr>
+                        <tr>
+                            <td>1er Piso</td>
+                            <td><input type="text" id="superficie_1erPisoM2" name="superficie_1erPisoM2" required></td>
+                            <td><input type="text" id="superficie_1erPisoML" name="superficie_1erPisoML" required></td>
+                        </tr>
+                        <tr>
+                            <td>2do Piso</td>
+                            <td><input type="text" id="superficie_2doPisoM2" name="superficie_2doPisoM2" required></td>
+                            <td><input type="text" id="superficie_2doPisoML" name="superficie_2doPisoML" required></td>
+                        </tr>
+                        <tr>
+                            <td>3er Piso</td>
+                            <td><input type="text" id="superficie_3erPisoM2" name="superficie_3erPisoM2" required></td>
+                            <td><input type="text" id="superficie_3erPisoML" name="superficie_3erPisoML" required></td>
+                        </tr>
+                        <tr>
+                            <td>4to Piso</td>
+                            <td><input type="text" id="superficie_4toPisoM2" name="superficie_4toPisoM2" required></td>
+                            <td><input type="text" id="superficie_4toPisoML" name="superficie_4toPisoML" required></td>
+                        </tr>
+                        <tr>
+                            <td>5to Piso</td>
+                            <td><input type="text" id="superficie_5toPisoM2" name="superficie_5toPisoM2" required></td>
+                            <td><input type="text" id="superficie_5toPisoML" name="superficie_5toPisoML" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    <button type="submit">Guardar Cambios</button>
+    </form>
+    </main>
+    <script type="module" src="Modificar_Proyecto.js"></script>
+    
+    </body>
+    </html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <header >
+        <div class="logo">
+            
+            <h1>SIBOP</h1>
+        </div>
+        
+    </header>
+    <nav>
+        <ul id="menu">
+            <li>
+                <a href="index.html">Inicio</a>
+                
+            </li>
+            <li>
+                <a href="#arquitectos">Arquitectos</a>
+                <ul class="submenu">
+                    <li><a href="Agregar_Arqui.html">Agregar Arquitecto</a></li>
+                    <li><a href="Modificar_Arqui.html">Modificar Arquitecto</a></li>
+                    <li><a href="Consultar_Arqui.html">Consultar Arquitecto</a></li>
+                    <li><a href="Eliminar_Arqui.html">Eliminar Arquitecto</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#proyectos">Proyectos</a>
+                <ul class="submenu">
+                    <li><a href="Agregar_Proyecto.html">Agregar Proyecto</a></li>
+                    <li><a href="Modificar_Proyecto.html">Modificar Proyecto</a></li>
+                    <li><a href="Consultar_Proyecto.html">Consultar Proyecto</a></li>
+                    <li><a href="Eliminar_Proyecto.html">Eliminar Proyecto</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#bitacora">Bitácora</a>
+                <ul class="submenu">
+                    <li><a href="consultar_bitacora.html">Consultar Bitácora</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar D.R</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Resgistrar D.R</h1>
+    <form id="agregarForm">
+    
+        <label for="clave">Clave:</label>
+        <input type="text" id="clave" required><br>
+
+        <label for="de_obra">Tipo de D.R :</label>
+        
+        <input type="checkbox" id="checkbox1" onchange="habilitarElemento(1)">
+        <label for="checkbox1">De Obra</label>
+        <input type="checkbox" id="checkbox2" onchange="habilitarElemento(2)">
+        <label for="checkbox2">De Proyecto</label>
+        <input type="checkbox" id="checkbox3" onchange="habilitarElemento(3)">
+        <label for="checkbox3">De Urbanización</label>
+        <input type="checkbox" id="checkbox4" onchange="habilitarElemento(4)">
+        <label for="checkbox4">De Patrimonio</label>
+        <br>
+        <br>
+        <label for="profesion">Profesión :</label>
+        <select id="profesion" name="profesion" required>
+            <option value="" selected disabled>Seleccione una opción</option>
+            <option value="arquitecto">Arquitecto</option>
+            <option value="ingeniero">Ingeniero</option>
+        </select>
+        <br>
+        <br>
+        
+        <label for="nombre_arqui">Nombre:</label>
+        <input type="text" id="nombre_arqui" required><br>
+
+        <div id="elemento1" style="display: none;">
+            <label for="dro">No D.R.O:</label>
+            <input type="text" id="dro" ><br>
+        </div>
+        <div id="elemento2" style="display: none;">
+            <label for="drp">No D.R.P:</label>
+            <input type="text" id="drp" ><br>
+        </div>
+        <div id="elemento3" style="display: none;">
+            <label for="dru">No D.R.U:</label>
+            <input type="text" id="dru" ><br>
+        </div>
+        <div id="elemento4" style="display: none;">
+            <label for="drpt">No D.R.PT:</label>
+            <input type="text" id="drpt" ><br>
+        </div>
+
+        <label for="direccion_arqui">Dirección:</label>
+        <input type="text" id="direccion_arqui" required><br>
+        <label for="telefono_arqui">Teléfono:</label>
+        <input type="tel" id="telefono_arqui" required><br>
+        <button type="submit">Agregar</button>
+    </form>
+
+    <script>
+        function habilitarElemento(numeroElemento) {
+            var checkBox = document.getElementById("checkbox" + numeroElemento);
+            var elemento = document.getElementById("elemento" + numeroElemento);
+
+            if (checkBox.checked == true) {
+                elemento.style.display = "block";
+            } else {
+                elemento.style.display = "none";
+            }
+        }
+    </script>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
+    <script type="module" src="sibop.js"></script>
+</body>
+</html>

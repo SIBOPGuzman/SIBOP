@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            
+            <h1>SIBOP</h1>
+        </div>
+    </header>
+    <nav>
+        <ul id="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li>
+                <a href="#arquitectos">Arquitectos</a>
+                <ul class="submenu">
+                    <li><a href="Agregar_Arqui.html">Agregar Arquitecto</a></li>
+                    <li><a href="Modificar_Arqui.html">Modificar Arquitecto</a></li>
+                    <li><a href="Consultar_Arqui.html">Consultar Arquitecto</a></li>
+                    <li><a href="Eliminar_Arqui.html">Eliminar Arquitecto</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#proyectos">Proyectos</a>
+                <ul class="submenu">
+                    <li><a href="Agregar_Proyecto.html">Agregar Proyecto</a></li>
+                    <li><a href="Modificar_Proyecto.html">Modificar Proyecto</a></li>
+                    <li><a href="Consultar_Proyecto.html">Consultar Proyecto</a></li>
+                    <li><a href="Eliminar_Proyecto.html">Eliminar Proyecto</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#bitacora">Bitácora</a>
+                <ul class="submenu">
+                    <li><a href="consultar_bitacora.html">Consultar Bitácora</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Agregar Proyecto</h1>
+        <form id="agregarProyectoForm">
+            <div class="form-container">
+                <h2>Datos del Proyecto</h2>
+                <div class="form-group">
+                    <label for="codigo">Código del Proyecto</label>
+                    <input type="text" id="codigo" name="codigo" required>
+                </div>
+                <div class="form-group">
+                    <label for="folio_licencias">Folio de Licencias</label>
+                    <input type="text" id="folio_licencias" name="folio_licencias" required>
+                </div>
+                <div class="form-group">
+                    <label for="folio_alineamiento">Folio de Alineamiento</label>
+                    <input type="text" id="folio_alineamiento" name="folio_alineamiento" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha_apertura">Fecha de Apertura</label>
+                    <input type="date" id="fecha_apertura" name="fecha_apertura" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha_cierre">Fecha de Cierre</label>
+                    <input type="date" id="fecha_cierre" name="fecha_cierre" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha_solicitud">Fecha de Solicitud</label>
+                    <input type="date" id="fecha_solicitud" name="fecha_solicitud" required>
+                </div>
+            </div>
+            <div class="form-container">
+                <h2>Datos Personales</h2>
+                <div class="form-group">
+                    <label for="nombre_razon_social">Nombre o Razón Social</label>
+                    <input type="text" id="nombre_razon_social" name="nombre_razon_social" required>
+                </div>
+                <div class="form-group">
+                    <label for="domicilio">Domicilio</label>
+                    <input type="text" id="domicilio" name="domicilio" required>
+                </div>
+
+            </div>
+            <div class="form_container">
+                <h2>Finca Afectada</h2>    
+                <div class="form-group">
+                    <label for="calle_colonia_FA">Calle y Colonia</label>
+                    <input type="text" id="calle_colonia_FA" name="calle_colonia_FA" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        
+
+                        <div id="mapa" style="width: 400px; height:500px"></div>
+                    </div>
+                </div>
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class ="col-md-6">
+                        <div class="form-group">
+                            <label for="latitud">Latitud</label>
+                            <input type="text" id="latitud" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class ="col-md-6">
+                        <div class="form-group">
+                            <label for="longitud">Longitud</label>
+                            <input type="text" id="longitud" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+
+                <div class="form-group">
+                    <label for="manzana_FA">Manzana</label>
+                    <input type="text" id="manzana_FA" name="manzana_FA" class="small-input" required>
+                    <label for="lote_FA" class="inline-label">Lote</label>
+                    <input type="text" id="lote_FA" name="lote_FA" class="small-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="cuenta_catastral_FA">Cuenta Catastral</label>
+                    <input type="text" id="cuenta_catastral_FA" name="cuenta_catastral_FA" required>
+                </div>
+            </div>
+            <div class="form-container">
+                <h2>Descripción de la Obra</h2>
+                <div class="form-group">
+                    <textarea id="descripcion_obra" name="descripcion_obra" rows="4" required></textarea>
+                </div>
+            </div>
+            <div class="form-container">
+                <h2>Superficie de la Obra</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Localización</th>
+                            <th>M2</th>
+                            <th>ML</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sótano</td>
+                            <td><input type="text" id="superficie_SotanoM2" name="superficie_SotanoM2" required></td>
+                            <td><input type="text" id="superficie_SotanoML" name="superficie_SotanoML" required></td>
+                        </tr>
+                        <tr>
+                            <td>Planta Baja</td>
+                            <td><input type="text" id="superficie_PlantaBajaM2" name="superficie_PlantaBajaM2" required></td>
+                            <td><input type="text" id="superficie_PlantaBajaML" name="superficie_PlantaBajaML" required></td>
+                        </tr>
+                        <tr>
+                            <td>Mezzanine</td>
+                            <td><input type="text" id="superficie_MezzanineM2" name="superficie_MezzanineM2" required></td>
+                            <td><input type="text" id="superficie_MezzanineML" name="superficie_MezzanineML" required></td>
+                        </tr>
+                        <tr>
+                            <td>1er Piso</td>
+                            <td><input type="text" id="superficie_1erPisoM2" name="superficie_1erPisoM2" required></td>
+                            <td><input type="text" id="superficie_1erPisoML" name="superficie_1erPisoML" required></td>
+                        </tr>
+                        <tr>
+                            <td>2do Piso</td>
+                            <td><input type="text" id="superficie_2doPisoM2" name="superficie_2doPisoM2" required></td>
+                            <td><input type="text" id="superficie_2doPisoML" name="superficie_2doPisoML" required></td>
+                        </tr>
+                        <tr>
+                            <td>3er Piso</td>
+                            <td><input type="text" id="superficie_3erPisoM2" name="superficie_3erPisoM2" required></td>
+                            <td><input type="text" id="superficie_3erPisoML" name="superficie_3erPisoML" required></td>
+                        </tr>
+                        <tr>
+                            <td>4to Piso</td>
+                            <td><input type="text" id="superficie_4toPisoM2" name="superficie_4toPisoM2" required></td>
+                            <td><input type="text" id="superficie_4toPisoML" name="superficie_4toPisoML" required></td>
+                        </tr>
+                        <tr>
+                            <td>5to Piso</td>
+                            <td><input type="text" id="superficie_5toPisoM2" name="superficie_5toPisoM2" required></td>
+                            <td><input type="text" id="superficie_5toPisoML" name="superficie_5toPisoML" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-group">
+                <label for="nombre_arqui">Nombre del Arquitecto</label>
+                <select id="nombre_arqui" name="nombre_arqui" required>
+                    <!-- Aquí se llenarán los arquitectos desde Firestore -->
+                </select>
+            </div>
+            <button type="submit">Agregar Proyecto</button>
+        </form>
+    </main>
+    <script>
+        function iniciarMapa(){
+            console.log('La función iniciarMapa se está ejecutando correctamente.');
+            var latitud = 19.7046600;
+            var longitud = -103.4617000;
+        
+            coordenadas  = {
+                lng: longitud,
+                lat: latitud
+            };
+        
+            generarMapa(coordenadas);
+        }
+        
+        function generarMapa(coordenadas){
+            var mapa = new google.maps.Map(document.getElementById('mapa'), {
+                zoom: 12,
+                center: new google.maps.LatLng(coordenadas.lat, coordenadas.lng)
+            });
+        
+            var marcador = new google.maps.Marker({
+                map: mapa,
+                draggable: true,
+                position: new google.maps.LatLng(coordenadas.lat, coordenadas.lng)
+            });
+        
+            marcador.addListener('dragend',function(event){
+                document.getElementById("latitud").value = this.getPosition().lat();
+                document.getElementById("longitud").value = this.getPosition().lng();
+            });
+        }
+        
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX2bJV6IBaam0Vh0VWWyWeJBeu81LOxnE&callback=iniciarMapa"></script>
+
+    <script type="module" src="Agregar_Proyecto.js"></script>
+    
+
+</body>
+</html>

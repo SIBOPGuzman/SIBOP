@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Arquitecto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SIBOP</h1>
+        </div>
+    </header>
+    <nav>
+        <ul id="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li>
+                <a href="#arquitectos">Arquitectos</a>
+                <ul class="submenu">
+                    <li><a href="Agregar_Arqui.html">Agregar Arquitecto</a></li>
+                    <li><a href="Modificar_Arqui.html">Modificar Arquitecto</a></li>
+                    <li><a href="Consultar_Arqui.html">Consultar Arquitecto</a></li>
+                    <li><a href="Eliminar_Arqui.html">Eliminar Arquitecto</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#proyectos">Proyectos</a>
+                <ul class="submenu">
+                    <li><a href="Agregar_Proyecto.html">Agregar Proyecto</a></li>
+                    <li><a href="Modificar_Proyecto.html">Modificar Proyecto</a></li>
+                    <li><a href="Consultar_Proyecto.html">Consultar Proyecto</a></li>
+                    <li><a href="Eliminar_Proyecto.html">Eliminar Proyecto</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#bitacora">Bitácora</a>
+                <ul class="submenu">
+                    <li><a href="consultar_bitacora.html">Consultar Bitácora</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <h1>Eliminar Arquitecto</h1>
+    <form id="consultarForm">
+        <label for="claveConsulta">Clave del Arquitecto:</label>
+        <input type="text" id="claveConsulta" placeholder="Ingrese la clave del arquitecto"><br>
+        <label for="nombreConsulta">Nombre del Arquitecto:</label>
+        <input type="text" id="nombreConsulta" placeholder="Ingrese el nombre del arquitecto"><br>
+        <button type="submit">Consultar</button>
+    </form>
+    
+
+    <form id="resultadosForm" style="display: none;">
+        <div id="resultados">
+            <h2>Datos del Arquitecto</h2>
+            <p><strong>Clave del Arquitecto:</strong> <span id="clave"></span></p>
+            <p><strong>Nombre:</strong> <span id="nombre_arqui"></span></p>
+            <p><strong>Dirección:</strong> <span id="direccion_arqui"></span></p>
+            <p><strong>Profesión:</strong> <span id="profesion"></span></p>
+            <p><strong>Teléfono:</strong> <span id="telefono_arqui"></span></p>
+            <p><strong>No. D.R.P:</strong> <span id="drp"></span></p>
+            <p><strong>No. D.R.O:</strong> <span id="dro"></span></p>
+            <p><strong>No. D.R.U:</strong> <span id="dru"></span></p>
+            <p><strong>No. D.R.PT:</strong> <span id="drpt"></span></p>
+        </div>
+        <form id="eliminarForm" style="display:none;">
+            <button type="submit">Eliminar</button>
+        </form>
+    
+        <script type="module" src="Eliminar_Arqui.js"></script>
+    </body>
+    </html>
+
+
+    

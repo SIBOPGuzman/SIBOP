@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Bitácoras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+           
+            <h1>SIBOP</h1>
+        </div>
+    </header>
+    <nav>
+        <ul id="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li>
+                <a href="#arquitectos">Arquitectos</a>
+                <ul class="submenu">
+                    <li><a href="Agregar_Arqui.html">Agregar Arquitecto</a></li>
+                    <li><a href="Modificar_Arqui.html">Modificar Arquitecto</a></li>
+                    <li><a href="Consultar_Arqui.html">Consultar Arquitecto</a></li>
+                    <li><a href="Eliminar_Arqui.html">Eliminar Arquitecto</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#proyectos">Proyectos</a>
+                <ul class="submenu">
+                    <li><a href="Agregar_Proyecto.html">Agregar Proyecto</a></li>
+                    <li><a href="Modificar_Proyecto.html">Modificar Proyecto</a></li>
+                    <li><a href="Consultar_Proyecto.html">Consultar Proyecto</a></li>
+                    <li><a href="Eliminar_Proyecto.html">Eliminar Proyecto</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#bitacora">Bitácora</a>
+                <ul class="submenu">
+                    <li><a href="consultar_bitacora.html">Consultar Bitácora</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Consulta de Bitácoras</h1>
+        <form>
+            
+        
+            <label for="listaArquitectos">Selecciona un Arquitecto:</label>
+            <select id="listaArquitectos">
+                <option value="">--Selecciona un Arquitecto--</option>
+            </select>
+        
+            <label for="listaProyectos">Selecciona un Proyecto:</label>
+            <select id="listaProyectos">
+                <option value="">--Selecciona un Proyecto--</option>
+            </select>
+        
+            <label for="listaBitacoras">Selecciona una Bitácora:</label>
+            <select id="listaBitacoras">
+                <option value="">--Selecciona una Bitácora--</option>
+            </select>
+        
+             
+        </form>
+        <form>
+            <h2>Detalles de la Bitácora</h2>
+            <p>Fecha: <span id="fecha"></span></p>
+            <p>Dibujo: <span id="dibujo"></span></p>
+            <div id="dibujoImg"></div>
+            <p>Observaciones: <span id="observaciones"></span></p>
+            <div id="imagenes"></div>
+        </form>
+        <script type="module" src="Consultar_Bitacora.js"></script>
+    </main>
+
+   
+</body>
+</html>
